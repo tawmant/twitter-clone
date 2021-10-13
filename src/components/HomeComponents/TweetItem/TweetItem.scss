@@ -1,0 +1,26 @@
+.tweet-item {
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+  &__row {
+    display: flex;
+  }
+  &__right {
+    margin-right: 1rem;
+  }
+  &__left {
+    width: 100%;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__more {
+    width: 2.4rem;
+  }
+  &__actions {
+    margin-top: 1rem;
+    svg {
+      width: 2.4rem;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "../global";
+
+.navbar {
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    .twitter-icon {
+      max-width: 4.7rem;
+      fill: #0a62c4;
+    }
+    .nav-item {
+      // margin: 2rem 0;
+      padding-right: 1rem;
+      a {
+        width: 100%;
+      }
+      div {
+        padding: 1.5rem 1.2rem;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 2rem;
+      }
+      &__icon {
+        svg {
+          width: 2.4rem;
+          // max-height: 2.4rem;
+          margin-right: 2rem;
+        }
+      }
+      &__text {
+        @include font(Robot, 2rem, 500, 1.9rem, #000);
+      }
+    }
+    .nav-item:hover a {
+      div {
+        background: rgba($color: #000000, $alpha: 0.1);
+      }
+    }
+  }
+}

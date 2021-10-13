@@ -1,0 +1,105 @@
+@import "../global";
+
+.app {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 4rem;
+    max-height: 4.5rem;
+    padding: 0.7rem 0.5rem;
+    svg {
+      width: 2.4rem;
+    }
+    input[type="file"] {
+      display: none;
+    }
+    label {
+      cursor: pointer;
+    }
+  }
+  .icon:hover {
+    background-color: rgba($color: #204f85, $alpha: 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &__content {
+    border: 0.1rem solid rgba($color: #000000, $alpha: 0.1);
+    padding: 0;
+  }
+  &__title {
+    h1 {
+      @include font(Robot, 1.6rem, 700, 1.8rem, #000);
+    }
+  }
+  &__post-news {
+    display: flex;
+    border-top: 0.1rem solid rgba($color: #000000, $alpha: 0.1);
+    border-bottom: 0.1rem solid rgba($color: #000000, $alpha: 0.1);
+    .post-news__wrapper {
+      display: flex;
+      padding: 0 1rem;
+    }
+    .post__img {
+      max-width: 5rem;
+      max-height: 5rem;
+      border-radius: 50%;
+    }
+  }
+  &__post-right {
+    padding: 0 1rem;
+    width: 100%;
+    .post-right-bottom {
+      display: flex;
+      justify-content: space-between;
+      .block__add-any {
+        display: flex;
+      }
+    }
+    .line-post {
+      margin: 1rem 0;
+      width: 100%;
+      height: 0.1rem;
+      background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+  textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none; /*remove the resize handle on the bottom right*/
+  }
+  &__post-input {
+    border: none;
+    font-size: 1.6em;
+    width: 100%;
+    padding: 1rem 0rem;
+  }
+
+  &__post-input::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  &__post-input {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  &__tweet {
+    padding: 0.5rem 1.4rem;
+    background: #76b0f1;
+    @include font("Robot", 1.6rem, 700, 1.9, #fff);
+    border-radius: 2rem;
+    border: none;
+  }
+}
