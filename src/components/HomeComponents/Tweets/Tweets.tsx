@@ -20,15 +20,15 @@ const Tweets: FC = () => {
   const scrollEvent = (): void => {
     window.addEventListener("scroll", (): void => {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        setOffset((prev) => ++prev);
+        setOffset((prev) => prev + 10);
       }
     });
   };
 
   useEffect(() => {
-    scrollEvent();
     (async () => {
       try {
+        await scrollEvent();
         const data = await request(
           `https://twitter-api-v2.herokuapp.com/api/tweet/list/?limit=10&offset=${offset}`,
           "GET",

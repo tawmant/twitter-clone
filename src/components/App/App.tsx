@@ -30,11 +30,7 @@ const App: FC = (): JSX.Element => {
 
   return (
     <AuthContext.Provider value={{ login, logout, token, ready, refresh }}>
-      <div className="app">
-        <div className="container">
-          <div className="app__row">{routes}</div>
-        </div>
-      </div>
+      <div className="app">{routes}</div>
     </AuthContext.Provider>
   );
 };

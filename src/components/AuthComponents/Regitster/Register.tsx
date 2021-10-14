@@ -1,9 +1,9 @@
 import React, { ChangeEvent, useState } from "react";
 import { useHttp } from "../../../hooks/http.hook";
 
-import "./_registerPage.scss";
+import "./_register.scss";
 
-const RegisterPage = () => {
+const Register = () => {
   const [register, setRegister] = useState({
     name: "",
     email: "",
@@ -95,4 +95,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default Register;

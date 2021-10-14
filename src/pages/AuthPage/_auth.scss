@@ -1,0 +1,57 @@
+@import "../../components/global";
+
+.auth {
+  &__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: url("https://pbs.twimg.com/profile_banners/3260518932/1611793886/1500x500");
+    svg {
+      max-width: 22rem;
+    }
+  }
+  &__right {
+    svg {
+      max-width: 5rem;
+    }
+  }
+  &__title {
+    @include font("Roboto", 5.7rem, 900, 1, #000);
+    margin: 4rem 0;
+  }
+  &__description {
+    @include font("Roboto", 2.7rem, 900, 1, #000);
+    margin-bottom: 2rem;
+  }
+  &__sign-up {
+    @include font("Roboto", 1.5rem, 900, 1.9, #000);
+    padding: 0.5rem 4rem;
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-radius: 3rem;
+  }
+  &__sign-up:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  &__private-agreement {
+    @include font("Roboto", 1.3rem, 400, 1.5, #000);
+    max-width: 70%;
+    opacity: 0.7;
+    padding: 2rem 0;
+    a {
+      color: #0a62c4;
+      border-bottom: 0.1rem solid #fff;
+    }
+    a:hover {
+      border-bottom: 0.1rem solid #0a62c4;
+    }
+  }
+  &__sign-in {
+    @include font("Roboto", 1.5rem, 400, 1.5, #000);
+    span {
+      color: #0a62c4;
+      cursor: pointer;
+    }
+  }
+}

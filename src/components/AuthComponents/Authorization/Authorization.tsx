@@ -1,10 +1,10 @@
 import React, { ChangeEvent, MouseEvent, useContext, useState } from "react";
 import axios from "axios";
-import { useRoutes } from "../../routes";
-import { useHttp } from "../../hooks/http.hook";
-import { AuthContext } from "../../context/AuthContext";
+import { useRoutes } from "../../../routes";
+import { useHttp } from "../../../hooks/http.hook";
+import { AuthContext } from "../../../context/AuthContext";
 
-const AuthPage = () => {
+const Authorization = () => {
   const [authData, setAuthData] = useState<{ [key: string]: string }>({
     login: "",
     password: "",
@@ -53,4 +53,4 @@ const AuthPage = () => {
   );
 };
 
-export default AuthPage;
+export default Authorization;
